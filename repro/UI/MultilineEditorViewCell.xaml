@@ -7,8 +7,6 @@
 	<ViewCell.View>
 		<Editor Margin="10, 0, 0, 0"
 			AutoSize="TextChanges"
-			HeightRequest="170"
-			MeasureInvalidated="Editor_MeasureInvalidated"
 			Text="{Binding Text, Source={x:Reference this}}">
 		</Editor>
 	</ViewCell.View>
