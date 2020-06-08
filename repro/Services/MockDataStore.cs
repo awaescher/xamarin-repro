@@ -24,23 +24,19 @@ namespace repro.Services
 		}
 
 		public string Intro { get; }
-			= "These cells contain autosized editors (AutoSize=TextChanges) in combination with long texts. As soon as you " +
-			"start editing in a cell, you can add more text and scroll within the cell." +
+			= "This cell contains a autosized editor (AutoSize=TextChanges) in combination with a long text in a TableView. " +
+			"As soon as you start editing, you can add more text and scroll within the cell." +
 			System.Environment.NewLine + System.Environment.NewLine +
 			"Just add a few new lines - it'll work well. But the editor does not size with " +
 			"the text. Instead, a scrollbar is shown. I'd expect the editor to behave like " +
 			"the editor for Notes in Apple's Contacts app does." +
 			System.Environment.NewLine + System.Environment.NewLine +
-			"It's not that the cell would not change the size individually. Just add a few lines " +
+			"It's not that the cell would not be able to change the size individually. Just add a few lines " +
 			"and switch to another page and back to this. The cell is sized perfectly.";
 
 		public string Lorem { get; }
 			= "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt " +
-			"ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo " +
-			"dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet." +
-			" Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut " +
-			"labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et " +
-			"ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
+			"ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo.";
 
 		public async Task<bool> AddItemAsync(Item item)
 		{

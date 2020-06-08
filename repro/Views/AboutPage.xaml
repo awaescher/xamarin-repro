@@ -63,7 +63,7 @@
 					Text="Thanks for checking this out." />
 				<BoxView HeightRequest="50" />
 				<Label
-					Text="The 'auto size editors' page shows an issue with multiline editors in a ListView. More details over there." />
+					Text="The 'auto size editors' page shows an issue with multiline editors in a TableView. More details over there." />
 				<Label
 					Text="The 'Translucency *' pages show that the ListView can handle Translucent NavigationBars very well but as soon as
 				a RefeshView is wrapped around, the content is moved below the NavigationBar.

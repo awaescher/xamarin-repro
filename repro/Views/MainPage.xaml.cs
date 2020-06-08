@@ -35,10 +35,10 @@ namespace repro.Views
 						MenuPages.Add(id, CreateNavigationPage(new AutoSizeEditors()));
 						break;
 					case (int)MenuItemType.TranslucentWithoutRefreshView:
-						MenuPages.Add(id, CreateNavigationPage(new TranslucentWithoutRefreshPage()));
+						MenuPages.Add(id, CreateTranslucentNavigationPage(new TranslucentWithoutRefreshPage()));
 						break;
 					case (int)MenuItemType.TranslucentWithRefreshView:
-						MenuPages.Add(id, CreateNavigationPage(new TranslucentWithRefreshPage()));
+						MenuPages.Add(id, CreateTranslucentNavigationPage(new TranslucentWithRefreshPage()));
 						break;
 				}
 			}
@@ -56,8 +56,13 @@ namespace repro.Views
 			}
 		}
 
-
 		private Xamarin.Forms.NavigationPage CreateNavigationPage(Xamarin.Forms.Page page)
+		{
+			var navigationPage = new Xamarin.Forms.NavigationPage(page);
+			return navigationPage;
+		}
+
+		private Xamarin.Forms.NavigationPage CreateTranslucentNavigationPage(Xamarin.Forms.Page page)
 		{
 			var navigationPage = new Xamarin.Forms.NavigationPage(page);
 			Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.SetIsNavigationBarTranslucent(navigationPage, true);

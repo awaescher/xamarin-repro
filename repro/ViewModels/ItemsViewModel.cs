@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 using repro.Models;
 using repro.Views;
+using System.Linq;
 
 namespace repro.ViewModels
 {
@@ -53,5 +54,7 @@ namespace repro.ViewModels
 				IsBusy = false;
 			}
 		}
+
+		public Item FirstItem => Items.First();
 	}
 }

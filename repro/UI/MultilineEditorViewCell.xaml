@@ -2,11 +2,14 @@
 <ViewCell
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Name="this"
 	x:Class="repro.UI.MultilineEditorViewCell">
 	<ViewCell.View>
-		<StackLayout>
-			<Label
-				Text="Hello Xamarin.Forms!" />
-		</StackLayout>
+		<Editor Margin="10, 0, 0, 0"
+			AutoSize="TextChanges"
+			HeightRequest="170"
+			MeasureInvalidated="Editor_MeasureInvalidated"
+			Text="{Binding Text, Source={x:Reference this}}">
+		</Editor>
 	</ViewCell.View>
 </ViewCell>

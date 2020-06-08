@@ -4,6 +4,7 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:d="http://xamarin.com/schemas/2014/forms/design"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:ui="clr-namespace:repro.UI"
 	mc:Ignorable="d"
 	x:Class="repro.Views.AutoSizeEditors"
 	Title="{Binding Title}"
@@ -13,17 +14,24 @@
 			Text="Add"
 			Clicked="AddItem_Clicked" />
 	</ContentPage.ToolbarItems>
-	<ListView
-		HasUnevenRows="True"
-		ItemsSource="{Binding Items}">
-		<ListView.ItemTemplate>
-			<DataTemplate>
-				<ViewCell>
-					<Editor
-						AutoSize="TextChanges"
-						Text="{Binding LongText}" />
-				</ViewCell>
-			</DataTemplate>
-		</ListView.ItemTemplate>
-	</ListView>
+	
+		<TableView
+			HasUnevenRows="True"
+			Intent="Form">
+			<TableSection
+				Title="Multiline editor in a TableView">
+				<ui:MultilineEditorViewCell
+					Text="{Binding Source={x:Reference BrowseItemsPage}, Path=BindingContext.FirstItem.LongText, Mode=TwoWay}" />
+			</TableSection>
+			<TableSection
+				Title="Some other cells so that you can see the bounds of the editor above">
+				<TextCell
+					Text="I've got two tickets to Iron Maiden, Baby." />
+				<TextCell
+					Text="Come with me friday don't say maybe. " />
+				<SwitchCell
+					Text="> I'm in!"
+					On="True" />
+			</TableSection>
+		</TableView>
 </ContentPage>
