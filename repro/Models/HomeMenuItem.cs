@@ -6,6 +6,7 @@ namespace repro.Models
 {
 	public enum MenuItemType
 	{
+		About,
 		AutoSizeEditors,
 		TranslucentWithoutRefreshView,
 		TranslucentWithRefreshView,

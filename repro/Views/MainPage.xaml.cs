@@ -28,8 +28,11 @@ namespace repro.Views
 			{
 				switch (id)
 				{
-					case (int)MenuItemType.AutoSizeEditors:
+					case (int)MenuItemType.About:
 						MenuPages.Add(id, CreateNavigationPage(new AboutPage()));
+						break;
+					case (int)MenuItemType.AutoSizeEditors:
+						MenuPages.Add(id, CreateNavigationPage(new AutoSizeEditors()));
 						break;
 					case (int)MenuItemType.TranslucentWithoutRefreshView:
 						MenuPages.Add(id, CreateNavigationPage(new TranslucentWithoutRefreshPage()));

@@ -54,14 +54,20 @@
 				Spacing="10">
 				<Label
 					FontSize="22"
-					Text="Issue Repro">
-				</Label>
+					Text="Issue Repro" />
 				<Label
-					Text="This is shows a few issues I encountered with Xamarin.Forms 4.6">
-				</Label>
+					Text="This app shows a few issues I encountered with Xamarin.Forms 4.6" />
 				<Label
-					Text="Thanks for checking this out.">
-				</Label>
+					Text="Please start by opening the menu on the left." />
+				<Label
+					Text="Thanks for checking this out." />
+				<BoxView HeightRequest="50" />
+				<Label
+					Text="The 'auto size editors' page shows an issue with multiline editors in a ListView. More details over there." />
+				<Label
+					Text="The 'Translucency *' pages show that the ListView can handle Translucent NavigationBars very well but as soon as
+				a RefeshView is wrapped around, the content is moved below the NavigationBar.
+				" />
 			</StackLayout>
 		</ScrollView>
 	</Grid>

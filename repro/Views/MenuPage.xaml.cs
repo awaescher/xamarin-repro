@@ -20,6 +20,7 @@ namespace repro.Views
 
 			menuItems = new List<HomeMenuItem>
 			{
+				new HomeMenuItem {Id = MenuItemType.About, Title="About" },
 				new HomeMenuItem {Id = MenuItemType.AutoSizeEditors, Title="Auto size editors" },
 				new HomeMenuItem {Id = MenuItemType.TranslucentWithRefreshView, Title="Translucency with RefreshView" },
 				new HomeMenuItem {Id = MenuItemType.TranslucentWithoutRefreshView, Title="Translucency without RefreshView" }
