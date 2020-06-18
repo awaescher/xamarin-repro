@@ -8,8 +8,10 @@ namespace repro.Models
 	{
 		About,
 		AutoSizeEditors,
-		TranslucentWithoutRefreshView,
-		TranslucentWithRefreshView,
+		TranslucentNavbarWithScrollviewAndRefreshView,
+		TranslucentNavbarWithScrollviewNoRefreshView,
+		TranslucentNavbarWithTableViewAndRefreshView,
+		TranslucentNavbarWithTableViewNoRefreshView,
 	}
 	public class HomeMenuItem
 	{

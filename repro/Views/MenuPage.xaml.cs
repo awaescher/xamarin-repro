@@ -22,8 +22,10 @@ namespace repro.Views
 			{
 				new HomeMenuItem {Id = MenuItemType.About, Title="About" },
 				new HomeMenuItem {Id = MenuItemType.AutoSizeEditors, Title="Auto size editors" },
-				new HomeMenuItem {Id = MenuItemType.TranslucentWithRefreshView, Title="Translucency with RefreshView" },
-				new HomeMenuItem {Id = MenuItemType.TranslucentWithoutRefreshView, Title="Translucency without RefreshView" }
+				new HomeMenuItem {Id = MenuItemType.TranslucentNavbarWithTableViewNoRefreshView, Title="Translucency\n✅ TableView without RefreshView" },
+				new HomeMenuItem {Id = MenuItemType.TranslucentNavbarWithTableViewAndRefreshView, Title="Translucency\n🆘 TableView with RefreshView" },
+				new HomeMenuItem {Id = MenuItemType.TranslucentNavbarWithScrollviewNoRefreshView, Title="Translucency\n✅ Scrollview without RefreshView" },
+				new HomeMenuItem {Id = MenuItemType.TranslucentNavbarWithScrollviewAndRefreshView, Title="Translucency\n✅ Scrollview with RefreshView" }
 			};
 
 			ListViewMenu.ItemsSource = menuItems;

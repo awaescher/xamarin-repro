@@ -16,11 +16,11 @@ namespace repro.Views
 	// Learn more about making custom code visible in the Xamarin.Forms previewer
 	// by visiting https://aka.ms/xamarinforms-previewer
 	[DesignTimeVisible(false)]
-	public partial class TranslucentWithRefreshPage : ContentPage
+	public partial class TranslucentNavbarWithTableViewNoRefreshView : ContentPage
 	{
 		ItemsViewModel viewModel;
 
-		public TranslucentWithRefreshPage()
+		public TranslucentNavbarWithTableViewNoRefreshView()
 		{
 			InitializeComponent();
 

@@ -7,6 +7,7 @@ using Xamarin.Forms.Xaml;
 
 using repro.Models;
 using Xamarin.Forms.PlatformConfiguration;
+
 namespace repro.Views
 {
 	// Learn more about making custom code visible in the Xamarin.Forms previewer
@@ -34,11 +35,17 @@ namespace repro.Views
 					case (int)MenuItemType.AutoSizeEditors:
 						MenuPages.Add(id, CreateNavigationPage(new AutoSizeEditors()));
 						break;
-					case (int)MenuItemType.TranslucentWithoutRefreshView:
-						MenuPages.Add(id, CreateTranslucentNavigationPage(new TranslucentWithoutRefreshPage()));
+					case (int)MenuItemType.TranslucentNavbarWithTableViewNoRefreshView:
+						MenuPages.Add(id, CreateTranslucentNavigationPage(new TranslucentNavbarWithTableViewNoRefreshView()));
 						break;
-					case (int)MenuItemType.TranslucentWithRefreshView:
-						MenuPages.Add(id, CreateTranslucentNavigationPage(new TranslucentWithRefreshPage()));
+					case (int)MenuItemType.TranslucentNavbarWithTableViewAndRefreshView:
+						MenuPages.Add(id, CreateTranslucentNavigationPage(new TranslucentNavbarWithTableViewAndRefreshView()));
+						break;
+					case (int)MenuItemType.TranslucentNavbarWithScrollviewNoRefreshView:
+						MenuPages.Add(id, CreateTranslucentNavigationPage(new TranslucentNavbarWithScrollviewNoRefreshView()));
+						break;
+					case (int)MenuItemType.TranslucentNavbarWithScrollviewAndRefreshView:
+						MenuPages.Add(id, CreateTranslucentNavigationPage(new TranslucentNavbarWithScrollviewAndRefreshView()));
 						break;
 				}
 			}
